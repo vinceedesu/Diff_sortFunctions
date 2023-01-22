@@ -81,6 +81,7 @@ def merge_sort(nums):
             k += 1 
     print(nums)
 
+###QUICK Sort###
 def quick_sort(arr, left, right):
     if left < right:
         partition_pos = partition(arr, left, right)
@@ -106,6 +107,7 @@ def partition(arr, left, right):
 
     return i
 
+##### UI #####
 def main():
     print("========================")
     print("The array is: ", nums)
