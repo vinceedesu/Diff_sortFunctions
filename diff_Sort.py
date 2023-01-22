@@ -46,6 +46,30 @@ def insertion_sort(nums):
             
         print(nums)
 
-insertion_sort(nums)
+# insertion_sort(nums)
 
+def merge_sort(nums):
+    if len(nums) > 1:
+        left_nums = nums[:len(nums)//2]
+        right_nums = nums[len(nums)//2:]
+        
+        # Recursion
+        merge_sort(left_nums)
+        merge_sort(right_nums)
+        
+        # merging
+        i = 0 #left array index 
+        j = 0 #right array index
+        k = 0 #mergde array index
+        while i < len(left_nums) and j < len(right_nums):
+            if left_nums[i] < right_nums[j]:
+                nums[k] = left_nums[i]
+                i += 1
+            else:
+                nums[k] = right_nums[j]
+                j += 1
+            k += 1
+        
+        while 
+        
 
