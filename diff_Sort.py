@@ -58,9 +58,9 @@ def merge_sort(nums):
         merge_sort(right_nums)
         
         # merging
-        i = 0 #left array index 
-        j = 0 #right array index
-        k = 0 #mergde array index
+        i = 0 #left numsay index 
+        j = 0 #right numsay index
+        k = 0 #mergde numsay index
         while i < len(left_nums) and j < len(right_nums):
             if left_nums[i] < right_nums[j]:
                 nums[k] = left_nums[i]
@@ -69,7 +69,17 @@ def merge_sort(nums):
                 nums[k] = right_nums[j]
                 j += 1
             k += 1
-        
-        while 
-        
+         
+        while i < len(left_nums):
+            nums[k] = left_nums[i]
+            i += 1
+            k += 1
+
+        while j < len(right_nums):
+            nums[k] = right_nums[j]
+            j += 1
+            k += 1 
+
+merge_sort(nums)
+print(nums)
 
