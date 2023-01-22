@@ -22,8 +22,9 @@ def selection_sort(nums):
         nums[minPosition] = temp
     
         print(nums)
+    print(nums)
 
+selection_sort(nums)   
+    
+    
 
-# nums = [80, 68, 10, 31, 85, 67, 53, 100, 82, 19]
-selection_sort(nums)
-print(nums)
