@@ -103,8 +103,8 @@ def partition(arr, left, right):
     if arr[i] > pivot:
         arr[i], arr[right] = arr[right], arr[i]
     
-    print(arr)    
+
     return i
 
-    
 quick_sort(nums,0, len(nums) - 1)
+print(nums)
