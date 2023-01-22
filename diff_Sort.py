@@ -46,7 +46,7 @@ def insertion_sort(nums):
             
         print(nums)
 
-# insertion_sort(nums)
+###### merge sort ########
 
 def merge_sort(nums):
     if len(nums) > 1:
@@ -79,7 +79,32 @@ def merge_sort(nums):
             nums[k] = right_nums[j]
             j += 1
             k += 1 
+    print(nums)
 
-merge_sort(nums)
-print(nums)
+def quick_sort(arr, left, right):
+    if left < right:
+        partition_pos = partition(arr, left, right)
+        quick_sort(arr, left, partition_pos - 1)
+        quick_sort(arr, partition_pos + 1, right)
 
+def partition(arr, left, right):
+    i = left
+    j = right - 1
+    pivot = arr[right]
+
+    while i < j:
+        while i < right and arr[i] < pivot:
+            i += 1
+        while j > left and arr[j]  >= pivot:
+            j -= 1
+        if i < j:
+            arr[i], arr[j] = arr[j], arr[i]
+    
+    if arr[i] > pivot:
+        arr[i], arr[right] = arr[right], arr[i]
+    
+    print(arr)    
+    return i
+
+    
+quick_sort(nums,0, len(nums) - 1)
