@@ -7,22 +7,23 @@
 
 # Selection Sort
 
-# nums = [80, 68, 10, 31, 85, 67, 53, 100, 82, 19]
+nums = [80, 68, 10, 31, 85, 67, 53, 100, 82, 19]
 
 def selection_sort(nums):
     
-    for i in range(5):
+    for i in range(9):
         minPosition = i
-        for j in range(i,6):
+        for j in range(i,10):
             if nums[j] < nums[minPosition]:
                 minPosition = j
     
-    temp = nums[i]
-    nums[i] = nums[minPosition]
-    nums[minPosition] = temp
+        temp = nums[i]
+        nums[i] = nums[minPosition]
+        nums[minPosition] = temp
     
-    print(nums)
+        print(nums)
 
-nums = [80, 68, 10, 31, 85, 67]
+
+# nums = [80, 68, 10, 31, 85, 67, 53, 100, 82, 19]
 selection_sort(nums)
-# print(nums)
+print(nums)
