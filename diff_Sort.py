@@ -106,5 +106,24 @@ def partition(arr, left, right):
 
     return i
 
-quick_sort(nums,0, len(nums) - 1)
-print(nums)
+def main():
+    print("========================")
+    print("The array is: ", nums)
+    print("========================")
+    print("Select a sort method:\n1.Selection Sort\n2.Buble Sort\n3. Insertion Sort\n4. Merge Sort\n5. Quick Sort")
+    user_input = int(input("Input a number to operate the sort: "))
+ 
+    if user_input == 1:
+        selection_sort(nums)
+    elif user_input == 2:
+        bubble_sort(nums)
+    elif user_input == 3:
+        insertion_sort(nums)
+    elif user_input == 4:
+        merge_sort(nums)
+    elif user_input == 5:
+        quick_sort(nums,0, len(nums) - 1)
+        print(nums)
+    else:
+        print("Invalid Input!")
+main()
